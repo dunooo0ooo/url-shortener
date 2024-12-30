@@ -26,8 +26,12 @@ func main() {
 		log.Error("failed to initialize storage", sl.Err(err))
 		os.Exit(1)
 	}
-
 	_ = storage
+
+	// TODO: init router
+
+	// TODO:
+
 }
 
 func setupLogger(env string) *slog.Logger {
