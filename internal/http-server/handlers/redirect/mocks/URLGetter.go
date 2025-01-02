@@ -10,7 +10,7 @@ type URLGetter struct {
 }
 
 // GetURL provides a mock function with given fields: alias
-func (_m *URLGetter) GetURL(alias string) (string, error) {
+func (_m *URLGetter) GetURLByAlias(alias string) (string, error) {
 	ret := _m.Called(alias)
 
 	var r0 string
