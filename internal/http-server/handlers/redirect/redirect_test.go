@@ -39,7 +39,7 @@ func TestSaveHandler(t *testing.T) {
 			}
 
 			r := chi.NewRouter()
-			r.Get("/{alias}", redirect.New(slogdiscard.NewDiscardLogger(), urlGetterMock))
+			r.Get("/{alias}", redirect.Redirect(slogdiscard.NewDiscardLogger(), urlGetterMock))
 
 			ts := httptest.NewServer(r)
 			defer ts.Close()
